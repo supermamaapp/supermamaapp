@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago en Línea</title>
+    <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pago en Línea</h1>
+        <button id="menuBtn">Menú</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="registro.html">Registrar Nueva Mamá</a></li>
+            <li><a href="buscar_profesionales.html">Buscar Profesionales</a></li>
+            <li><a href="reservar_cita.html">Reservar Cita</a></li>
+            <li><a href="pago_en_linea.html">Pago en Línea</a></li>
+            <li><a href="recursos_blog.html">Recursos Blogs</a></li>
+            <li><a href="grupos_foro.html">Grupos y Foros</a></li>
+            <!-- Agrega aquí más opciones de navegación si es necesario -->
+        </ul>
+    </nav>
+    <main>
+        <!-- Formulario de pago en línea simulado -->
+        <h2>Proceso de Pago</h2>
+        <form id="paymentForm">
+
+            <label for="DNI">DNI:</label>
+            <input type="text" id="DNI" required>
+            <br>
+            
+            <label for="nombre_tarjeta">Nombre en la Tarjeta:</label>
+            <input type="text" id="nombre_tarjeta" required>
+            <br>
+
+            <label for="numero_tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numero_tarjeta" required>
+            <br>
+
+            <label for="fecha_expiracion">Fecha de Expiración:</label>
+            <input type="text" id="fecha_expiracion" placeholder="MM/YY" required>
+            <br>
+
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" required>
+            <br>
+
+            <input type="submit" value="Pagar">
+        </form>
+
+        <!-- Resultado del pago simulado -->
+        <div id="resultadoPago"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 SuperMamaApp</p>
+    </footer>
+
+    <!-- Script JavaScript para simular el proceso de pago -->
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const resultadoPago = document.getElementById("resultadoPago");
+            resultadoPago.innerHTML = "El pago se ha realizado exitosamente. Recibirás un correo de confirmación.";
+        });
+    </script>
+</body>
+</html>

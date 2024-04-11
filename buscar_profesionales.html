@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Profesionales de la Salud Emocional</title>
+    <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Búsqueda de Profesionales de la Salud Emocional</h1>
+        <button id="menuBtn">Menú</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="registro.html">Registrar Nueva Mamá</a></li>
+            <li><a href="buscar_profesionales.html">Buscar Profesionales</a></li>
+            <li><a href="reservar_cita.html">Reservar Cita</a></li>
+            <li><a href="pago_en_linea.html">Pago en Línea</a></li>
+            <li><a href="recursos_blog.html">Recursos Blogs</a></li>
+            <li><a href="grupos_foro.html">Grupos y Foros</a></li>
+            <!-- Agrega aquí más opciones de navegación si es necesario -->
+        </ul>
+    </nav>
+    <main>
+        <!-- Barra de búsqueda con filtros -->
+        <h2>Buscar Profesionales</h2>
+        <form action="procesar_busqueda.php" method="POST">
+            <label for="ubicacion">Ubicación:</label>
+            <input type="text" id="ubicacion" name="ubicacion">
+            <br>
+
+            <label for="especializacion">Especialización:</label>
+            <input type="text" id="especializacion" name="especializacion">
+            <br>
+
+            <label for="disponibilidad">Disponibilidad:</label>
+            <input type="text" id="disponibilidad" name="disponibilidad">
+            <br>
+
+            <!-- Agrega más filtros de búsqueda según sea necesario -->
+
+            <input type="submit" value="Buscar">
+        </form>
+
+        <!-- Resultados de la búsqueda -->
+
+<section id="resultados">
+    <h2>Resultado de Busqueda</h2>
+
+
+    <!-- Primer resultado simulado -->
+    <div class="resultado">
+        <h3>Dr. Juan Pérez</h3>
+        <p>Especialización: Psicología Clínica</p>
+        <p>Ubicación: Ciudad ABC</p>
+        <p>Disponibilidad: Lunes a Viernes</p>
+        <!-- Agrega más información sobre el profesional si es necesario -->
+    </div>
+
+    <!-- Segundo resultado simulado -->
+    <div class="resultado">
+        <h3>Dra. María González</h3>
+        <p>Especialización: Terapia Familiar</p>
+        <p>Ubicación: Ciudad XYZ</p>
+        <p>Disponibilidad: Martes y Jueves</p>
+        <!-- Agrega más información sobre el profesional si es necesario -->
+    </div>
+    
+</section>
+
+    
+        
+        <!-- Aquí puedes mostrar los perfiles de profesionales con información detallada sobre su experiencia y calificaciones -->
+        <!-- Por ejemplo, puedes usar listas o tarjetas para mostrar cada perfil -->
+    </main>
+    <footer>
+        <p>&copy; 2024 SuperMamaApp</p>
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const formulario = document.querySelector("form");
+        const resultados = document.getElementById("resultados");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Aquí puedes agregar lógica para procesar la reserva y obtener detalles reales si lo deseas
+
+            // Muestra la sección de resultados
+            resultados.style.display = "block";
+        });
+    });
+</script>
+    
+</body>
+</html>

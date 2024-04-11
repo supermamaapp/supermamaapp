@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Citas</title>
+    <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Reserva de Citas</h1>
+        <button id="menuBtn">Menú</button>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Inicio</a></li>
+            <li><a href="registro.html">Registrar Nueva Mamá</a></li>
+            <li><a href="buscar_profesionales.html">Buscar Profesionales</a></li>
+            <li><a href="reservar_cita.html">Reservar Cita</a></li>
+            <li><a href="pago_en_linea.html">Pago en Línea</a></li>
+            <li><a href="recursos_blog.html">Recursos Blogs</a></li>
+            <li><a href="grupos_foro.html">Grupos y Foros</a></li>
+            <!-- Agrega aquí más opciones de navegación si es necesario -->
+        </ul>
+    </nav>
+    <main>
+        <!-- Calendario para seleccionar fecha y hora de la cita -->
+        <h2>Programar una Cita</h2>
+        <form action="procesar_reserva.php" method="POST">
+            
+            <label for="DNI">DNI:</label>
+            <input type="text" id="DNI" name="DNI" required>
+            <br>
+            
+            <label for="profesional">Profesional:</label>
+            <input type="text" id="profesional" name="profesional" required>
+            <br>
+
+            
+            <label for="fecha_cita">Fecha de la Cita:</label>
+            <input type="date" id="fecha_cita" name="fecha_cita" required>
+            <br>
+
+            <label for="hora_cita">Hora de la Cita:</label>
+            <input type="time" id="hora_cita" name="hora_cita" required>
+            <br>
+
+            <!-- Agrega más detalles y opciones de reserva según sea necesario -->
+
+            <input type="submit" value="Reservar Cita">
+        </form>
+
+        <!-- Calendario para ver la disponibilidad de los profesionales -->
+        <!--<h2>Disponibilidad de Profesionales</h2>-->
+        <!-- Aquí puedes mostrar un calendario interactivo que muestra la disponibilidad de los profesionales -->
+        <!-- Los detalles de disponibilidad pueden actualizarse en tiempo real -->
+
+<section id="resultados">
+    <h2>Confirmación de Reserva</h2>
+    <p>¡Tu cita ha sido reservada con éxito!</p>
+    <p>Detalles de la cita:</p>
+    <ul>
+        <li><strong>Profesional:</strong> Dr. Juan Perez</li>
+        <li><strong>Fecha:</strong> 2023-09-15</li>
+        <li><strong>Hora:</strong> 14:30</li>
+        <!-- Agrega más detalles de la cita según sea necesario -->
+    </ul>
+</section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 SuperMamaApp</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const formulario = document.querySelector("form");
+        const resultados = document.getElementById("resultados");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Aquí puedes agregar lógica para procesar la reserva y obtener detalles reales si lo deseas
+
+            // Muestra la sección de resultados
+            resultados.style.display = "block";
+        });
+    });
+</script>
+
+</body>
+</html>
